@@ -1,0 +1,24 @@
+Last login: Thu Nov 10 11:33:17 on ttys002
+(base) bricelibeau@MacBook-Air-de-Brice ~ % print("test")
+zsh: missing end of string
+(base) bricelibeau@MacBook-Air-de-Brice ~ % print('test')
+zsh: missing end of string
+(base) bricelibeau@MacBook-Air-de-Brice ~ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
