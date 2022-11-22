@@ -1,9 +1,11 @@
 package geometry;
 
+import java.io.Serializable;
+
 /**
  * Simplistic class representing Cartesian 2D positions.
  */
-public class Position {
+public class Position implements Serializable{
     /** Abscissa */
     private double x;
     /** Ordinate */
