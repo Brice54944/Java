@@ -1,25 +1,26 @@
 package rationals;
 
-import java.util.ArrayList;
+
+import java.util.TreeMap;
 public class EgyptianFraction {
-    private ArrayList<Rational> unitFractions;
+    private TreeMap<Rational, Integer> unitFractions;
 
     public EgyptianFraction() {
-        this.unitFractions = new ArrayList<>();
+        this.unitFractions =new TreeMap<>();
     }
 
     public void addUnitFraction(int denom) {
         Rational fractionUnit = new Rational(1, denom);
-        this.unitFractions.add(fractionUnit);
+        this.unitFractions.put(fractionUnit, denom);
     }
 
 
 
-    public ArrayList<Rational> getUnitFractions() {
+    public TreeMap<Rational, Integer> getUnitFractions() {
         return this.unitFractions;
     }
 
-    public void setUnitFractions(ArrayList<Rational> unitFractions) {
+    public void setUnitFractions(TreeMap<Rational, Integer> unitFractions) {
         this.unitFractions = unitFractions;
     }
     
@@ -29,11 +30,12 @@ public class EgyptianFraction {
     @Override
     public String toString() {
         String string = "";
-        string += this.unitFractions.get(0).toString()+ " " + "+";
-        for (int i = 1; i < this.unitFractions.size()-1; i++){
-            string += " " + this.unitFractions.get(i).toString() + " " + "+";
-            }
-        string += " " + this.unitFractions.get(this.unitFractions.size()-1).toString();
+       // string += this.unitFractions.firstEntry().getKey()+ " " + "+";
+        for (Rational rational : this.unitFractions.keySet())
+        //for (int i = 1; i < this.unitFractions.size()-1; i++){
+            string += " " + rational.toString() + " " + "+";
+            //}
+        //string += " " + this.unitFractions.get(this.unitFractions.size()-1).toString();
         return string;
 
     }
