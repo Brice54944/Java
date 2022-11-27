@@ -1,10 +1,10 @@
 package mobility.model;
 
 public class Drunkard extends Mobile{
-    private final static double theta0 = Math.PI/12*rand.nextGaussian() + 2*Math.PI*rand.nextDouble();
+    
 
     public Drunkard(double x0, double y0, double speed0) {
-        super(x0, y0, theta0, speed0);
+        super(x0, y0, speed0);
     }
 
     public void move(double timeStep) {

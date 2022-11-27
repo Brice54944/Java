@@ -10,12 +10,11 @@ public  abstract class  Mobile {
     protected double theta;
     protected double speed;
 
-    public Mobile(double x0, double y0,double theta0, double speed0) {
+    public Mobile(double x0, double y0, double speed0) {
         this.x = x0;
         this.y = y0;
         this.speed = speed0;
-        this.theta = theta0;
-
+        this.theta = 2*Math.PI*rand.nextDouble();
     }
 
     public abstract void move(double timeStep);
