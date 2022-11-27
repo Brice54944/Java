@@ -1,6 +1,6 @@
 package mobility.model;
 
-import java.util.Random;
+
 
 public class Brownian extends Mobile{
     private final static double theta0 = 2*Math.PI*rand.nextDouble();
@@ -14,7 +14,7 @@ public class Brownian extends Mobile{
     public void move(double timeStep) {
         this.theta = 2*Math.PI*rand.nextDouble();
         this.x += this.speed*timeStep*Math.cos(this.theta);
-        this.y += this.speed*timeStep*Math.sin(timeStep);
+        this.y += this.speed*timeStep*Math.sin(this.theta);
     }
 
     @Override
